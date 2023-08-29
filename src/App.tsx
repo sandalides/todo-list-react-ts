@@ -11,7 +11,9 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <h1>Todo List</h1>
-      <TodoList initialTodos={Todos} />
+      <div className="list">
+        <TodoList initialTodos={Todos} />
+      </div>
     </div>
   );
 };
