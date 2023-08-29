@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import TodoList from "./components/TodoList";
 
-function App() {
+const App: React.FC = () => {
+  const Todos = [
+    { id: 1, text: "Learn react", completed: false },
+    { id: 2, text: "Build a todo app", completed: true },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Todo List</h1>
+      <TodoList initialTodos={Todos} />
     </div>
   );
-}
+};
 
 export default App;
